@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Education from "./pages/Education";
@@ -12,6 +13,7 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
+  const [subjects, setSubjects] = useState();
   return (
     <BrowserRouter>
       <Header />
@@ -19,8 +21,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Warning" element={<Warning />} />
         <Route path="/Education" element={<Education />} />
-        <Route path="/Parlons_en" element={<ParlonsEn />} />
-        <Route path="/Parlons_en/:id" element={<Forum />} />
+        <Route
+          path="/Parlons_en"
+          element={<ParlonsEn subjects={subjects} setSubjects={setSubjects} />}
+        />
+        <Route path="/Parlons_en/:id" element={<Forum subjects={subjects} />} />
         <Route path="/Depistage" element={<Depistage />} />
         <Route path="/ERROR404" element={<Error404 />} />
       </Routes>

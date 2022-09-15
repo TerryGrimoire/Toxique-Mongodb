@@ -55,6 +55,10 @@ article {
 
 a {
   text-decoration: none;
+  color: initial;
+}
+header * {
+  color: var(--light-color);
 }
 
 li {
@@ -175,7 +179,7 @@ header, footer {
   background-image: url(./assets/chat.gif);
   background-size: 10%;
   background-repeat:no-repeat;
-  background-position: 100% -50%;
+  background-position: 102% -20px;
 }
 
 .container {
@@ -197,6 +201,20 @@ header, footer {
   border-radius: 0.5rem;
   padding: 0.35rem 0.5rem;
   font-size: 0.75rem;
+}
+
+.form {
+  position: relative;
+  width: 49rem;
+}
+
+.form button {
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  top: 20%;
+  left: 95%;
+  width: 4rem;
 }
 
 .depistage {
@@ -267,7 +285,10 @@ header, footer {
 .comment-update {
   position: absolute;
   top: 5%;
-  left: 97%;
+  left: 96.5%;
+  border: none;
+  width: 2rem;
+  background-color: transparent;
 }
 
 .img-points {
@@ -284,11 +305,11 @@ header, footer {
   box-shadow: var(--box-shadow);
 }
 .modal button {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
+  border: none;
 }
 .modal button:hover {
   box-shadow: var(--box-shadow);
-  padding: 0.5rem 1rem;
 }
 
 .modal-edit {
@@ -336,7 +357,6 @@ header, footer {
 
 .loading-page img {
   background-color: var(--dark-color);
-  border-radius: 50%;
   margin: 0 auto;
   position: absolute;
   top: 40vh;
