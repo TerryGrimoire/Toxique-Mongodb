@@ -205,9 +205,12 @@ header, footer {
 
 .form {
   position: relative;
-  width: 49rem;
+  padding-right: 1rem;
 }
 
+.form input {
+  width: 100%;
+}
 .form button {
   border: none;
   position: absolute;

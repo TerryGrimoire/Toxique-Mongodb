@@ -33,7 +33,6 @@ function Forum({ subjects }) {
       const user = await app.logIn(credentials);
       const allComments = await user.functions.postOneComment(x);
       setData({ ...data, allComments });
-      window.location.reload();
     } catch (err) {
       console.error("Failed to log in", err);
     }
@@ -68,7 +67,6 @@ function Forum({ subjects }) {
         newComment
       );
       setData({ ...data, allComments });
-      window.location.reload();
     } catch (err) {
       console.error("Failed to log in", err);
     }
